@@ -1,0 +1,108 @@
+Leasing_Info
+unitmanagement/leasing_info/
+Post Request
+{
+	leasing_info:{
+		leasing_type 			     : str !max length 50,
+		is_sub_leasing_allowed       : bool
+		application_fee              : float
+		security_deposit		     : float
+		monthly_rent_1month_lease    : float | NULL
+		monthly_rent_6month_lease    : float | NULL
+		monthly_rent_12month_lease   : float | NULL
+		is_lease_termination_allowed : bool
+		lease_termination_cost  	 : float
+		additional_leasing_clauses   : str | NULL
+	}
+
+}
+
+Address
+unitmanagement/address/
+Post Request
+{
+	address : {
+		street_address 	: str !150 max length
+		city 			: str !50 max length
+		state 	 		: str !48 max length
+		county  		: str !25 max length
+		zip  			: str !15 max length
+	}
+}
+
+Address
+Put request
+unitmanagement/address/<int:id>/
+--Partial Request Possible---
+{
+	address : {
+		street_address 	: str !150 max length
+		city 			: str !50 max length
+		state 	 		: str !48 max length
+		county  		: str !25 max length
+		zip  			: str !15 max length
+	}
+}
+
+Unit_Type
+unitmanagement/unit_type/
+Post Request
+{
+	unit_type : {
+		unit_type :  str !50 max length
+	}
+}
+
+Community
+unitmanagement/community/
+Post Request
+{
+	community : {
+		address_id     :  int | Null ?Foreign key
+		community_name :  str !50 max length
+	}
+}
+
+
+Unit
+unitmanagement/unit/
+Post Request
+{
+	"unit" : {
+		unit_type_id 	 			 : int | Null ?Foreign key
+		community_id 	 			 : int | Null ?Foreign key
+		address_id 		 			 : int | Null ?Foreign key
+		leasing_info_id  			 : int | Null ?Foreign key
+
+		num_of_bedrooms  			 : int
+		num_of_bathrooms 			 : int
+		num_of_balcony				 : int
+		is_available 				 : bool ?default False
+		is_reserved 				 : bool ?default False
+		unit_availability_start_date : DateType | NULL
+		unit_availability_end_date   : DateType | NULL
+		unit_description 			 : str | NULL
+		living_area_sf 				 : int
+		unit_number 				 : int | NULL 
+		unit_at_floor 				 : int | NULL
+	}
+}
+
+
+
+{
+	AddressObject:{ 
+		addresses:[
+				{
+				street_address 	: str !150 max length
+				city 			: str !50 max length
+				state 	 		: str !48 max length
+				county  		: str !25 max length
+				zip  			: str !15 max length
+			},
+			{....},
+		]
+	totalAddresses : total tally
+
+
+}

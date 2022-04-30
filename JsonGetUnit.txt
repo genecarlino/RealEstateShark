@@ -1,0 +1,47 @@
+
+Unit Get and post Request
+
+{
+	unit : {
+		community : {
+			street_address 	: str !varchar(150)
+			city 			: str !varchar(50)
+			state 			: str !varchar(48)
+			county 			: str !varchar(25)
+			zip 			: str !varchar(15)
+			community_name  : str !varchar(50)
+		}
+		leasing_info:{
+			leasing_type 				 : str !varchar(50)
+			is_sub_leasing_allowed  	 : bool
+			application_fee  			 : float !formated for money 
+			security_deposit 			 : float !formated for money 
+			monthly_rent_1month_lease 	 : float !formated for money, null=True
+			monthly_rent_6month_lease 	 : float !formated for money, null=True
+			monthly_rent_12month_lease 	 : float !formated for money, null=True
+			is_lease_termination_allowed : bool
+			lease_termination_cost 		 : float !formated for money 
+			additional_leasing_clauses 	 : varchar(inf), null=true
+		}
+		unittype 					 : str !varchar(50)
+		street_address 				 : str !varchar(150)
+		city 						 : str !varchar(50)
+		state 						 : str !varchar(48)
+		county 						 : str !varchar(25)
+		zip 						 : str !varchar(15)
+		
+		num_of_bedrooms  			 : int 
+		num_of_bathrooms 			 : int 
+		num_of_balcony	 			 : int 
+		is_available     			 : bool
+		is_reserved 	 			 : bool
+		unit_availability_start_date : DateField, null= true
+		unit_availability_end_date   : DateField, null= true
+		unit_description 			 : varchar(inf), null=true
+		living_area_sf 				 : int 
+		unit_number 				 : int, null=true
+		unit_at_floor 				 : int, null=true
+	
+	}
+
+}

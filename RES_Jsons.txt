@@ -1,0 +1,23 @@
+Addresss
+{
+	"address :{
+		"street"  : "4996 Jadewood Farms",
+		"city"    : "Baltimore",
+		"state"   : "Maryland",
+		"county"  : "Baltimore"
+		"zipcode  : "21201" 
+	}
+
+}
+
+
+{
+	"address :{
+		"street"  : str,
+		"city"    : str,
+		"state"   : str,
+		"county"  : str,
+		"zipcode  : str
+	}
+
+}
