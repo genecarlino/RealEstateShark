@@ -13,7 +13,7 @@ pipenv install
 2.Activate the Pipenv shell:
 pipenv shell
 
-3. Run the Django server:
+3.Run the Django server:
 python manage.py runserver 0.0.0.0:8000
 
 By default, the application will be accessible at 0.0.0.0:8000 in your web browser. Please note that this project is still under development and the current version is a prototype.
