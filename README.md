@@ -1,4 +1,4 @@
-# RealEstateSharkDeployment
+# RealEstateShark
 
 This project serves as a demonstration of Django's connection to a React frontend. The project, albeit incomplete, showcases the capabilities of the Django REST Framework integrated with a React frontend.
 
