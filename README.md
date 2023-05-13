@@ -7,14 +7,11 @@ Installation and Running Instructions
 
 Before you start, ensure you are in the correct directory where you want to run these commands.
 
-1. Install the required packages using Pipenv:
-pipenv install
+1. Install the required packages using Pipenv:      pipenv install
 
-2. Activate the Pipenv shell:
-pipenv shell
+2. Activate the Pipenv shell:                       pipenv shell
 
-3. Run the Django server:
-python manage.py runserver 0.0.0.0:8000
+3. Run the Django server:                           python manage.py runserver 0.0.0.0:8000
 
 By default, the application will be accessible at 0.0.0.0:8000 in your web browser. Please note that this project is still under development and the current version is a prototype.
 
